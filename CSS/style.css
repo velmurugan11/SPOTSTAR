@@ -1,0 +1,46 @@
+#boxstyle1{
+    width: 400px;
+}
+.commonStyle{
+    
+    width: 150px;
+    height: 150px;
+    border-radius: 70%;
+}
+.MD{
+    height: auto;
+    width: 700px;
+}
+#B1{
+    margin-right: 1100px;
+    height: 30px;
+    width: 130px;
+    border-radius: 20px;
+}
+/* body
+{
+    background-color: #B790D4;
+} */
+
+.Front,.TamilD{
+    height: 300px;
+    width: 250px;
+    border-radius: 10px;
+}
+.direct1{
+    height: 150px;
+    width: 150px;
+}
+.Tamilhero{
+    height: 150px;
+    width: 150px;
+}
+.poster{
+    height: 400px;
+    width: 300px;
+    padding-left: 500px;
+}
+.Movie{
+    height: 400px;
+    width: 900px;
+}
