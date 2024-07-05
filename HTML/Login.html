@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="/SPOTSTAR/IMAGES/Only LOGO.png">
+    <title>Login</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-image: url(/SPOTSTAR/IMAGES/Lang\ BG.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /* #Top{
+            position:absolute;
+            background-color: rgb(149, 168, 162);
+            height: 500px;
+            width: 450px;
+            z-index: 10;
+            margin-top: 50px;margin-left: 240px;
+            border-radius: 10px 0px 0px 10px;
+        }
+        #TopB1{
+            margin: 50px;
+            height: 40px;
+            width: 90px;
+            border-radius: 20px;
+            margin-left: 170px;
+        } */
+        #H11{
+            font-family: sans-serif;
+            color: white;
+            margin-left: 90px;
+            margin-top: 100px;
+        }
+        #Container{
+            position: fixed;
+            margin-left: 320px;
+            margin-top: 100px;
+            height: 500px;
+            width: 900px;
+            background: rgba( 128, 128, 168, 0.2 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 12px );
+            -webkit-backdrop-filter: blur( 12px );
+            border-radius: 10px;
+        }
+        div.Container{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        #Login-in-Container{
+            position: fixed;
+            filter: brightness();
+            /* background-image: url(/SPOTSTAR/IMAGES/Background/purple2.webp); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 550px;
+            width: 450px;
+            border: none;
+            border-radius: 10px 0px 0px 10px
+        }
+        #H1{
+            /* color: ; */
+            font-family: sans-serif;
+            margin-left: 180px;
+            margin-top: 20px;
+        }
+        .IP1{
+            height: 40px;
+            width: 300px;
+            border-radius: 50px;
+            padding-left: 50px;
+            font-family: sans-serif;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        #username{
+            margin-left: 50px;
+            margin-top: 70px;
+        }
+        #pass{
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+        #P1{
+            color: rgb(219, 211, 211);
+            font-family: sans-serif;
+            margin-left: 140px;
+            margin-top: 40px;
+        }
+        #B1{
+            height: 40px;
+            width: 150px;
+            border-radius: 50px;
+            margin-top: 20px;
+            background-color: rgba(119, 67, 165, 0.5);
+            margin-left: 145px;
+            border: none;
+        }
+        #Sign-up-Container{
+            position: fixed;
+            background-position: scaleX(-1);
+            height: 550px;
+            width: 450px;
+            margin-left: 451px;
+            border: none;
+            border-radius: 0px 10px 10px 0px;
+        }
+        #H12{
+            font-family: sans-serif;
+            margin-left: 170px;
+            margin-top: 20px;
+        }
+        #IP21{
+            margin-left: 50px;
+            margin-top: 70px;
+        }
+        #IP22{
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+        #IP23{
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+        #IP24{
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+        #IP25{
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+        #B2{
+            height: 40px;
+            width: 150px;
+            border-radius: 50px;
+            margin-top: 20px;
+            background-color: rgb(128, 102, 151);
+            margin-left: 145px;
+            border: none;
+        }
+        body{
+            background-color: gray;
+        }
+        #TOPLOGO{
+            position: absolute;
+            /* background-color: black; */
+            height: 200px;
+            width: 100%;
+        }
+        #TOPLOGO div{
+            background-image: url(/SPOTSTAR/IMAGES/Only\ LOGO.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-color: aqua; */
+            height: 200px;
+            width: 240px;
+        }
+    </style>
+    <script>
+        function Signup_validation(){
+            // Phone Number Validation
+            var Phone=document.getElementById("IP22").value;
+            var Phone_flag=false
+            if((Phone>=6000000000)&&(Phone<=9999999999)){
+                Phone_flag=true
+            }
+
+
+            // Email Validation
+            var Email=document.getElementById("IP23").value 
+            var Email_flag=false
+            var flag1=false
+            var flag2=true
+            for(var i=0;i<Email.length;i++){
+                if(Email[i]=='@'){
+                    flag1=true
+                }
+                if((Email[i]>='A')&&(Email[i]<='Z')){
+                    flag2=false
+                }
+            }
+            if((flag1==true)&&(flag2==true)){
+                Email_flag=true
+            }
+
+
+            // Password Validation
+            var Password=document.getElementById("IP24").value 
+            var Password_flag=false
+            var Length=0
+            var Upper=0
+            var Lower=0
+            var Num=0
+            var Special=0
+            for(var i=0;i<Password.length;i++){
+                Length++
+                if((Password[i]>='A')&&(Password[i]<='Z')){
+                    Upper++
+                }else if((Password[i]>='a')&&(Password[i]<='z')){
+                    Lower++
+                }else if((Password[i]>='0')&&(Password[i]<='9')){
+                    Num++;
+                }else{
+                    Special++
+                }
+            }
+            if((Length>=8)&&(Length<=16)&&(Upper>=1)&&(Lower>=1)&&(Num>=1)&&(Special>=1)){
+                Password_flag=true
+            }
+
+
+            // Confirm Password Validation
+            var Confirm=document.getElementById("IP25").value 
+            var Confirm_flag=false
+            if(Password==Confirm){
+                Confirm_flag=true
+            }
+
+            // Final Validation
+            if((Phone_flag==true)&&(Email_flag==true)&&(Password_flag==true)&&(Confirm_flag==true)){
+                window.location.href="/SPOTSTAR/HTML/OTP1.html"
+            }else{
+                document.getElementById("result").innerHTML="Invalid Details"
+            }
+
+        }
+        //LOGIN 
+        function login_validation(){
+            let db={'Vel':'Velu@123','Captain-Velu':'Captain@123','vijay':'ajith@0123'}
+            let user_name=document.getElementById("username").value;
+            let password=document.getElementById("pass").value;
+            let Names=Object.keys(db);
+            let flag=false
+            for(let i=0;i<Names.length;i++){
+                if(Names[i]==user_name){
+                    if(db[Names[i]]==password){
+                        flag=true
+                    }
+                }
+            }
+            if(flag==true){
+                window.location.href="Home.html";
+            }else{
+                document.getElementById("error").innerHTML="Invalid user"
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <!-- <div id="Top">
+        <h1 id="H11">Welcome Back!</h1>
+        <button id="TopB1">Log in</button>
+    </div> -->
+    <div id="TOPLOGO">
+        <div></div>
+    </div>
+    <div id="Container" class="Container">
+        <div id="Login-in-Container">
+            <h1 id="H1">Log in</h1>
+            <input type="text" placeholder="Username" class="IP1" id="username" >
+            <input type="text" placeholder="Password" class="IP1" id="pass">
+            <a href="/SPOTSTAR/HTML/Forgot.html"><p id="P1">Forgot your password?</p></a>
+            <button type="button" id="B1" onclick="login_validation()">LOG IN</button>
+        </div>
+        <div id="Sign-up-Container">
+            <h1 id="H12">Sign up</h1>
+            <input type="text" placeholder="Name" class="IP1" id="IP21">
+            <input type="number" placeholder="Phone number" class="IP1" id="IP22">
+            <input type="text" placeholder="Email" class="IP1" id="IP23">
+            <input type="text" placeholder="Password" class="IP1" id="IP24">
+            <input type="text" placeholder="confirmPassword" class="IP1" id="IP25">
+            <button type="button" id="B2" onclick="Signup_validation()">SIGN UP</button>
+        </div>
+    </div>
+</body>
+</html>

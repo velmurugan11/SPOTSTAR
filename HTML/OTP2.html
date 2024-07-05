@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP VERIFICATION</title>
+    <link rel="icon" type="image/x-icon" href="/WEB-TECH-PROJECT/SPOTSTAR/IMAGES/Spotstar-logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/SPOTSTAR/IMAGES/Spotstar-logo.jpg">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            font-family: "Poppins", sans-serif;
+        }
+        #head1{
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+        }
+        body{
+            background: linear-gradient(to left, #24243e, #302b63, #0f0c29); 
+        }
+        #boxstyle1{
+            display: flex;
+            flex-wrap: wrap;
+            /* background-image: url(/SPOTSTAR/IMAGES/Background/purple4.jpg);
+            background-repeat: no-repeat;
+            background-size: cover; */
+            flex-direction: column;
+            align-items: center;
+            height: 300px;
+        }
+        #boxstyle1 div{
+            color: black;
+            margin: 20px;
+            flex-basis: 0%;
+        }
+        h2{
+            font-size: 40px;
+
+        }
+        #T1{
+            font-size: 30px;
+        }
+        input{
+            height: 30px;
+            width: 200px;
+            border-radius: 20px;
+            border: none;
+            box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        /* box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+        button{
+            height: 40px;
+            width: 100px;
+            border-radius: 20px;
+            border: none;
+            box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+        }
+    </style>
+    <script>
+        var Generated_OTP=Math.floor(Math.random()*9999)
+        alert(Generated_OTP)
+        function Verify_OTP(){
+            var user_OTP=document.getElementById("otp").value 
+            if(Generated_OTP==user_OTP){
+                window.location.href="/SPOTSTAR/HTML/Accountcreated.html"
+
+            }
+            else{
+                document.getElementById("Incorrect").innerHTML="Invalid OTP"
+            }
+
+        }
+        function Resend(){
+            window.location.href="./OTP1.html"
+        }
+    </script>
+</head>
+<body>
+    <div id="head1">
+       <div><h1 style="color: #fff;">VERIFY OTP</h1></div>  
+   </div>
+   <br>
+    <div id="boxstyle1">
+        <div>
+            <table>
+                <tr>
+                    <td><h2>OTP:</h2></td>
+                    <td><input type="number"></td>
+                </tr>
+            </table>
+        </div>
+        <div><a href="/SPOTSTAR/HTML/Changepass.html" style="text-align: center;"><button type="submit">VERIFY</button></a></div>
+        <div><button type="button">RESEND OTP</button></div>
+    </div>   
+</body>
+</html>
+
