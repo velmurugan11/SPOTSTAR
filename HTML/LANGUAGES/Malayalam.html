@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>MALAYALAM</title>
+    <link rel="icon" type="image/x-icon" href="/SPOTSTAR/IMAGES/Only LOGO.png">
+    <link rel="stylesheet" href="/SPOTSTAR/CSS/Lang.css">
+    <style>
+        img{
+    border-radius: 20px;
+}
+    </style>
+</head>
+<body>
+    <div id="Top">
+        <div><a href="/SPOTSTAR/HTML/movie.html"><button>BACK</button></a></div>
+        <div><h1>MALAYALAM</h1></div>
+        <div id="Top3"></div>
+    </div>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <!-- <div class="numbertext">1 / 3</div> -->
+          <a href="/SPOTSTAR/HTML/LANGUAGES/MOVIES/MALAYALAM"><img src="/SPOTSTAR/IMAGES/LANDSCAPE/MALAYALAM/Brmayugam.webp" width="1000px" height="500px"></a>
+          <div class="text">BRAMAYUGAM</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <!-- <div class="numbertext">2 / 3</div> -->
+          <a href="/SPOTSTAR/HTML/LANGUAGES/MOVIES/MALAYALAM/KR/Manjummel.html"><img src="/SPOTSTAR/IMAGES/LANDSCAPE/MALAYALAM/Majumel boys.avif" width="1000px" height="500px"></a>
+          <div class="text">MANJUMMEL BOYS</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <!-- <div class="numbertext">3 / 3</div> -->
+          <a href="/SPOTSTAR/HTML/LANGUAGES/MOVIES/MALAYALAM/KR/Thallu.html"><img src="/SPOTSTAR/IMAGES/LANDSCAPE/MALAYALAM/thallumaala.jpg" width="1000px" height="500px"></a>
+          <div class="text">THALLUMAALA</div>
+        </div>
+        
+        </div>
+        <br>
+        <br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+        <br>
+    <div class="card1">
+        <h2 id="Movie">DIRECTORS</h2>
+        <br>
+        <div id="M1">
+            <div>
+                <a href="/SPOTSTAR/HTML/LANGUAGES/MALAYALAM/Directors/KhalidRahman.html"><img src="/SPOTSTAR/IMAGES/Directors/mallu-Directors/khalid1.jpg" alt="" ></a>
+                <h2 id="H2"><u>KHALID RAHMAN</u></h2>
+            </div>
+            <div>
+                <a href="/SPOTSTAR/HTML/LANGUAGES/MALAYALAM/Directors/Mahesh.html"><img src="/SPOTSTAR/IMAGES/Directors/mallu-Directors/narayanan.avif" alt="" ></a>
+                <h2 id="H2"><u>MAHESH NARAYAN</u></h2>
+            </div>
+            <div>
+                <a href="/SPOTSTAR/HTML/LANGUAGES/MALAYALAM/Directors/AlphonsePuthren.html"><img src="/SPOTSTAR/IMAGES/Directors/mallu-Directors/Alphonse1.jpg" alt=""></a>
+                <h2 id="H2"><u>ALPHONSE PUTHIRAN</u></h2>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="card1">
+        <h2 id="Movie">ACTORS</h2>
+        <br>
+        <div id="M1">
+            <div>
+                <a href="/SPOTSTAR/HTML/LANGUAGES/MALAYALAM/Celebs/Fahadh.html"><img src="/SPOTSTAR/IMAGES/CELEBS/Mallu/Fafa1.jpg" alt="" ></a>
+                <h2 id="H2"><u>FAHADH FASSIL</u></h2>
+            </div>
+            <div>
+                <a href="/SPOTSTAR/HTML/LANGUAGES/MALAYALAM/Celebs/Mohanlal.html"><img src="/SPOTSTAR/IMAGES/CELEBS/Mallu/Mohanlal1.jpg" alt="" ></a>
+                <h2 id="H2"><u>MOHANLAL</u></h2>
+            </div>
+            <div>
+                <a href="/SPOTSTAR/HTML/LANGUAGES/MALAYALAM/Celebs/Tovino.html"><img src="/SPOTSTAR/IMAGES/CELEBS/Mallu/tovino1.jpg" alt="" ></a>
+                <h2 id="H2"><u>TOVINO THOMAS</u></h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        </script>
+</body>
+</html>
